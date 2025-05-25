@@ -1,0 +1,84 @@
+﻿body {
+    background-image: url(Pictures/SiteBack.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial;
+    padding-bottom: 0px;
+}
+
+h4 {
+    color: black;
+}
+
+td {
+    padding: 30px;
+}
+
+
+.ParagraphLeft {
+    text-indent: 90px;
+    animation: slidein-left 1s;
+    transform: scaleX(1);
+}
+
+@keyframes slidein-left {
+    0% {
+        transform: translateX(-200%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.ParagraphLeft2 {
+    animation: slidein-left2 2s;
+    transform: scaleX(1);
+}
+
+@keyframes slidein-left2 {
+    0% {
+        transform: translateX(-300%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+.ParagraphDown {
+    text-indent: 50px;
+    opacity: 0;
+    animation: slidein-down ease .4s forwards 1s;
+    transform: scaleX(1);
+}
+
+@keyframes slidein-down {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.body-content {
+    width: 100%;
+}
+
+footer {
+    background: #1b1c1f;
+    color: white;
+    padding: 0.5em;
+    grid-column: 1 / -1;
+    margin-top: auto;
+}

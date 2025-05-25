@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5759ED34-75A3-4026-A7BD-2901BAFF2BF5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OfficialProject</RootNamespace>
+    <AssemblyName>OfficialProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44330</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.4.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AK.aspx" />
+    <Content Include="Army.aspx" />
+    <Content Include="AutomaticKnife.aspx" />
+    <Content Include="AWP.aspx" />
+    <Content Include="BootKnife.aspx" />
+    <Content Include="BrassKnuckles.aspx" />
+    <Content Include="ButterflyKnife.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Crossbow.aspx" />
+    <Content Include="DataBase.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Defense.aspx" />
+    <Content Include="DeleteRecord.aspx" />
+    <Content Include="DeleteUser.aspx" />
+    <Content Include="DesertEagle.aspx" />
+    <Content Include="Famas.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="FiveSeven.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Glock.aspx" />
+    <Content Include="HuntingKnife.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="LoginAdmin.aspx" />
+    <Content Include="LogOut.aspx" />
+    <Content Include="M16.aspx" />
+    <Content Include="Military\AKProfile.jpg" />
+    <Content Include="Military\AKUse.jpg" />
+    <Content Include="Military\AWPProfile.jpg" />
+    <Content Include="Military\AWPUse.jpg" />
+    <Content Include="Military\CrossbowProfile.jpg" />
+    <Content Include="Military\CrossbowUse.jpg" />
+    <Content Include="Military\DesertEagleProfile.jpg" />
+    <Content Include="Military\DesertEagleUse.jpg" />
+    <Content Include="Military\FamasProfile.jpg" />
+    <Content Include="Military\FamasUse.jpg" />
+    <Content Include="Military\FiveSevenProfile.jpg" />
+    <Content Include="Military\FiveSevenUse.jpg" />
+    <Content Include="Military\Glock18Profile.jpg" />
+    <Content Include="Military\Glock18Use.jpg" />
+    <Content Include="Military\M16Profile.jpg" />
+    <Content Include="Military\M16Use.jpg" />
+    <Content Include="Military\Nova.jpg" />
+    <Content Include="Military\NovaProfile.jpg" />
+    <Content Include="Military\Scar20Profile.jpg" />
+    <Content Include="Military\Scar20Use.jpg" />
+    <Content Include="Military\USPProfile.jpg" />
+    <Content Include="Military\USPUse.jpg" />
+    <Content Include="Nova.aspx" />
+    <Content Include="Nunchaku.aspx" />
+    <Content Include="PepperSpray.aspx" />
+    <Content Include="Pictures\AssaultRifles.jpg" />
+    <Content Include="Pictures\AWP.jpg" />
+    <Content Include="Pictures\Background.jpg" />
+    <Content Include="Pictures\Bar.png" />
+    <Content Include="Pictures\Crossbow.jpg" />
+    <Content Include="Pictures\GmailLogo.png" />
+    <Content Include="Pictures\HandGun.jpg" />
+    <Content Include="Pictures\Logo.png" />
+    <Content Include="Pictures\MilitaryKnife.jpg" />
+    <Content Include="Pictures\PepperSpray.jpg" />
+    <Content Include="Pictures\PhoneLogo.jpg" />
+    <Content Include="Pictures\PostBack.jpg" />
+    <Content Include="Pictures\ProblemLogo.jpg" />
+    <Content Include="Pictures\SiteBack.jpg" />
+    <Content Include="Pictures\StunGun.jpg" />
+    <Content Include="Pictures\Sword.jpg" />
+    <Content Include="Pictures\Tasers.jpg" />
+    <Content Include="Pictures\Weapon1.jpg" />
+    <Content Include="Pictures\Weapon2.jpg" />
+    <Content Include="Pictures\Weapon3.jpg" />
+    <Content Include="Pictures\Weapon4.jpg" />
+    <Content Include="Pictures\Weapon5.jpg" />
+    <Content Include="Pictures\Weapon6.jpg" />
+    <Content Include="PocketKnife.aspx" />
+    <Content Include="PushDaggerKnife.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="SAPGloves.aspx" />
+    <Content Include="Scar.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="SelfDefense\BrassKnucklesProfile.jpg" />
+    <Content Include="SelfDefense\BrassKnucklesUse.jpg" />
+    <Content Include="SelfDefense\NunchakuProfile.jpg" />
+    <Content Include="SelfDefense\NunchakuUse.jpg" />
+    <Content Include="SelfDefense\PepperSprayProfile.jpg" />
+    <Content Include="SelfDefense\PepperSprayUse.jpg" />
+    <Content Include="SelfDefense\SAPGlovesProfile.jpg" />
+    <Content Include="SelfDefense\SAPGlovesUse.jpg" />
+    <Content Include="SelfDefense\StunGunProfile.jpg" />
+    <Content Include="SelfDefense\StunGunUse.jpg" />
+    <Content Include="SelfDefense\TaserProfile.jpg" />
+    <Content Include="SelfDefense\TaserUse.jpg" />
+    <Content Include="Sharp.aspx" />
+    <Content Include="Sharpened\AutomaticknifeProfile.jpg" />
+    <Content Include="Sharpened\AutomaticknifeUse.jpg" />
+    <Content Include="Sharpened\BootKnifeProfile.jpg" />
+    <Content Include="Sharpened\BootKnifeUse.jpg" />
+    <Content Include="Sharpened\ButterflyKnifeProfile.jpg" />
+    <Content Include="Sharpened\ButterflyKnifeUse.jpg" />
+    <Content Include="Sharpened\HuntingKnifeProfile.jpg" />
+    <Content Include="Sharpened\HuntingKnifeUse.jpg" />
+    <Content Include="Sharpened\PocketKnifeProfile.jpg" />
+    <Content Include="Sharpened\PocketKnifeUse.jpg" />
+    <Content Include="Sharpened\PushDaggerKnifeProfile.jpg" />
+    <Content Include="Sharpened\PushDaggerKnifeUse.jpg" />
+    <Content Include="Sharpened\SwordProfile.jpg" />
+    <Content Include="Sharpened\SwordUse.jpg" />
+    <Content Include="Sharpened\ThrowingKnifeProfile.jpg" />
+    <Content Include="Sharpened\ThrowingKnifeUse.jpg" />
+    <Content Include="Site.Master" />
+    <Content Include="StunGun.aspx" />
+    <Content Include="StyleAbout.css" />
+    <Content Include="StyleArmy.css" />
+    <Content Include="StyleContact.css" />
+    <Content Include="StyleDefense.css" />
+    <Content Include="StyleHome.css" />
+    <Content Include="StyleInfo.css" />
+    <Content Include="StylePost.css" />
+    <Content Include="StyleSharp.css" />
+    <Content Include="StyleTable.css" />
+    <Content Include="Sword.aspx" />
+    <Content Include="Taser.aspx" />
+    <Content Include="ThrowingKnife.aspx" />
+    <Content Include="Update.aspx" />
+    <Content Include="USP.aspx" />
+    <Content Include="Videos\AKVideo.mp4" />
+    <Content Include="Videos\AutomaticKnifeVideo.mp4" />
+    <Content Include="Videos\AWPVideo.mp4" />
+    <Content Include="Videos\BootKnifeVideo.mp4" />
+    <Content Include="Videos\BrassKnucklesVideo.mp4" />
+    <Content Include="Videos\ButterflyKnifeVideo.mp4" />
+    <Content Include="Videos\CrossbowViedo.mp4" />
+    <Content Include="Videos\DesertEagleVideo.mp4" />
+    <Content Include="Videos\FamasVideo.mp4" />
+    <Content Include="Videos\FiveSevenVideo.mp4" />
+    <Content Include="Videos\Glock18Video.mp4" />
+    <Content Include="Videos\HuntingKnifeVideo.mp4" />
+    <Content Include="Videos\M16Video.mp4" />
+    <Content Include="Videos\NovaVideo.mp4" />
+    <Content Include="Videos\NunchakuVideo.mp4" />
+    <Content Include="Videos\PepperSprayVideo.mp4" />
+    <Content Include="Videos\PocketKnifeVideo.mp4" />
+    <Content Include="Videos\PushDaggerKnifeVideo.mp4" />
+    <Content Include="Videos\SAPGlovesVideo.mp4" />
+    <Content Include="Videos\Scar20Video.mp4" />
+    <Content Include="Videos\StunGunVideo.mp4" />
+    <Content Include="Videos\SwordVideo.mp4" />
+    <Content Include="Videos\TaserVideo.mp4" />
+    <Content Include="Videos\ThrowingKnifeVideo.mp4" />
+    <Content Include="Videos\TypesOfWeapons.mp4" />
+    <Content Include="Videos\USPVideo.mp4" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AK.aspx.cs">
+      <DependentUpon>AK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AK.aspx.designer.cs">
+      <DependentUpon>AK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\Helper.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Army.aspx.cs">
+      <DependentUpon>Army.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Army.aspx.designer.cs">
+      <DependentUpon>Army.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AutomaticKnife.aspx.cs">
+      <DependentUpon>AutomaticKnife.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutomaticKnife.aspx.designer.cs">
+      <DependentUpon>AutomaticKnife.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AWP.aspx.cs">
+      <DependentUpon>AWP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AWP.aspx.designer.cs">
+      <DependentUpon>AWP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BootKnife.aspx.cs">
+      <DependentUpon>BootKnife.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BootKnife.aspx.designer.cs">
+      <DependentUpon>BootKnife.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BrassKnuckles.aspx.cs">
+      <DependentUpon>BrassKnuckles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BrassKnuckles.aspx.designer.cs">
+      <DependentUpon>BrassKnuckles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ButterflyKnife.aspx.cs">
+      <DependentUpon>ButterflyKnife.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ButterflyKnife.aspx.designer.cs">
+      <DependentUpon>ButterflyKnife.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Crossbow.aspx.cs">
+      <DependentUpon>Crossbow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Crossbow.aspx.designer.cs">
+      <DependentUpon>Crossbow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase.aspx.cs">
+      <DependentUpon>DataBase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBase.aspx.designer.cs">
+      <DependentUpon>DataBase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Defense.aspx.cs">
+      <DependentUpon>Defense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Defense.aspx.designer.cs">
+      <DependentUpon>Defense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteRecord.aspx.cs">
+      <DependentUpon>DeleteRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteRecord.aspx.designer.cs">
+      <DependentUpon>DeleteRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteUser.aspx.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteUser.aspx.designer.cs">
+      <DependentUpon>DeleteUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DesertEagle.aspx.cs">
+      <DependentUpon>DesertEagle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DesertEagle.aspx.designer.cs">
+      <DependentUpon>DesertEagle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Famas.aspx.cs">
+      <DependentUpon>Famas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Famas.aspx.designer.cs">
+      <DependentUpon>Famas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FiveSeven.aspx.cs">
+      <DependentUpon>FiveSeven.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FiveSeven.aspx.designer.cs">
+      <DependentUpon>FiveSeven.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Glock.aspx.cs">
+      <DependentUpon>Glock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Glock.aspx.designer.cs">
+      <DependentUpon>Glock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HuntingKnife.aspx.cs">
+      <DependentUpon>HuntingKnife.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HuntingKnife.aspx.designer.cs">
+      <DependentUpon>HuntingKnife.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAdmin.aspx.cs">
+      <DependentUpon>LoginAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginAdmin.aspx.designer.cs">
+      <DependentUpon>LoginAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="M16.aspx.cs">
+      <DependentUpon>M16.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="M16.aspx.designer.cs">
+      <DependentUpon>M16.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nova.aspx.cs">
+      <DependentUpon>Nova.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nova.aspx.designer.cs">
+      <DependentUpon>Nova.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nunchaku.aspx.cs">
+      <DependentUpon>Nunchaku.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nunchaku.aspx.designer.cs">
+      <DependentUpon>Nunchaku.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PepperSpray.aspx.cs">
+      <DependentUpon>PepperSpray.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PepperSpray.aspx.designer.cs">
+      <DependentUpon>PepperSpray.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PocketKnife.aspx.cs">
+      <DependentUpon>PocketKnife.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PocketKnife.aspx.designer.cs">
+      <DependentUpon>PocketKnife.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PushDaggerKnife.aspx.cs">
+      <DependentUpon>PushDaggerKnife.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PushDaggerKnife.aspx.designer.cs">
+      <DependentUpon>PushDaggerKnife.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SAPGloves.aspx.cs">
+      <DependentUpon>SAPGloves.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SAPGloves.aspx.designer.cs">
+      <DependentUpon>SAPGloves.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Scar.aspx.cs">
+      <DependentUpon>Scar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Scar.aspx.designer.cs">
+      <DependentUpon>Scar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sharp.aspx.cs">
+      <DependentUpon>Sharp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sharp.aspx.designer.cs">
+      <DependentUpon>Sharp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StunGun.aspx.cs">
+      <DependentUpon>StunGun.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StunGun.aspx.designer.cs">
+      <DependentUpon>StunGun.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sword.aspx.cs">
+      <DependentUpon>Sword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sword.aspx.designer.cs">
+      <DependentUpon>Sword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Taser.aspx.cs">
+      <DependentUpon>Taser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Taser.aspx.designer.cs">
+      <DependentUpon>Taser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ThrowingKnife.aspx.cs">
+      <DependentUpon>ThrowingKnife.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ThrowingKnife.aspx.designer.cs">
+      <DependentUpon>ThrowingKnife.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="USP.aspx.cs">
+      <DependentUpon>USP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="USP.aspx.designer.cs">
+      <DependentUpon>USP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55666</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44330/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

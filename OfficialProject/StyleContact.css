@@ -1,0 +1,186 @@
+﻿body {
+    background-image: url(Pictures/SiteBack.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial;
+    padding-bottom: 0px;
+}
+
+h1 {
+    color: black;
+}
+h4 {
+    color: black;
+}
+
+li {
+    color: white;
+    right: -100px;
+    padding: 5px 1px;
+    text-shadow: 2px 2px gray;
+}
+
+/*הבר*/
+.bar {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-image: url(./Pictures/Bar.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+    /*המילים*/
+    .bar a {
+        font-family: Arial;
+        float: left;
+        color: white;
+        text-align: center;
+        padding: 15px 18px;
+        text-decoration: none;
+        font-size: 15px;
+        right: 40px;
+        text-shadow: 2px 2px 4px black;
+        transition: 0.3s;
+    }
+
+
+
+
+        /*כשאתה עובר על הכפתורים*/
+        .bar a:hover {
+            transition: color 0.3s ease-out;
+            color: gray;
+        }
+
+
+
+/*השעון בבר*/
+#clock {
+    font-family: Arial;
+    text-align: center;
+    width: 150px;
+    margin: -3px; /*אפס במקור*/
+    display: flex;
+    justify-content: center;
+    color: white;
+    letter-spacing: 3px;
+    position: absolute;
+    right: 70px;
+    width: 7%;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    padding: 7px 13px;
+    text-shadow: 2px 2px gray;
+}
+
+
+.logo {
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    margin: -55px; /*אפס במקור*/
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 30px;
+}
+
+/*הכותרת*/
+.SlideUp {
+    color: black;
+    display: inline-block;
+    position: relative;
+    font-family: tahoma;
+    opacity: 0;
+    top: 40px;
+    animation: slideUp ease .4s forwards 0.5s;
+}
+
+    .SlideUp::after {
+        content: '';
+        height: 3.5px;
+        width: 300%;
+        text-align: center;
+        background-color: black;
+        position: absolute;
+        left: calc(100% - 200%);
+        bottom: -3px;
+        animation: animate 1.5s linear forwards;
+        transform: scaleX(1);
+    }
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-40px);
+        opacity: 1;
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: scaleX(0);
+    }
+
+    30% {
+        transform: scaleX(0);
+    }
+
+    60% {
+        transform: scaleX(0);
+    }
+}
+
+.ParagraphLeft {
+    text-indent: 100px;
+    animation: slidein-left 1s;
+    transform: scaleX(1);
+}
+
+@keyframes slidein-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.ParagraphDown {
+    text-indent: 100px;
+    opacity: 0;
+    animation: slidein-down ease .4s forwards 0.5s;
+    transform: scaleX(1);
+}
+
+@keyframes slidein-down {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+.body-content {
+    width: 100%;
+}
+
+footer {
+    background: #1b1c1f;
+    color: white;
+    padding: 0.5em;
+    grid-column: 1 / -1;
+    margin-top: auto;
+}
